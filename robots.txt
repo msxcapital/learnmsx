@@ -1,0 +1,9 @@
+# learnmsx.com
+User-agent: *
+Allow: /
+
+# Private Seiten — Link kommt persönlich per WhatsApp, gehören nicht in den Index.
+Disallow: /strategie
+Disallow: /strategy
+
+Sitemap: https://learnmsx.com/sitemap.xml
