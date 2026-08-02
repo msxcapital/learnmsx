@@ -7,14 +7,13 @@
     <meta name="theme-color" content="#080B14" />
 
     <!-- INDEX-SCHALTER: Solange im Impressum TODO(mo)-Platzhalter stehen, bleibt
-         die Seite auf noindex (zusätzlich als Header in netlify.toml).
-         Beim Freischalten BEIDE Stellen entfernen. -->
+         die Seite auf noindex. Beim Freischalten entfernen. -->
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>MSX — Trading-Coaching mit MO | NASDAQ &amp; Gold</title>
+    <title>MSX — Sprache wählen / Choose your language</title>
     <meta
       name="description"
-      content="MSX ist das Trading-Coaching von MO: Daytrading auf NASDAQ und Gold, 1:1 begleitet statt Massenkurs. Video ansehen und direkt auf WhatsApp schreiben."
+      content="MSX — Trading-Coaching mit MO. Wähle deine Sprache: Deutsch oder English."
     />
     <link rel="canonical" href="https://learnmsx.com/" />
     <link rel="alternate" hreflang="de" href="https://learnmsx.com/de" />
@@ -23,10 +22,7 @@
 
     <meta property="og:site_name" content="MSX" />
     <meta property="og:title" content="MSX — Trading-Coaching mit MO" />
-    <meta
-      property="og:description"
-      content="Daytrading auf NASDAQ und Gold, 1:1 begleitet. Schau dir das Video an — wenn du das Gleiche willst, schreibst du mir direkt."
-    />
+    <meta property="og:description" content="Daytrading auf NASDAQ und Gold, 1:1 begleitet statt Massenkurs." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://learnmsx.com/" />
     <meta property="og:image" content="https://learnmsx.com/og.jpg" />
@@ -36,64 +32,211 @@
     <meta property="og:locale:alternate" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MSX — Trading-Coaching mit MO" />
-    <meta
-      name="twitter:description"
-      content="Daytrading auf NASDAQ und Gold, 1:1 begleitet statt Massenkurs."
-    />
     <meta name="twitter:image" content="https://learnmsx.com/og.jpg" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://learnmsx.com/#website",
-            "url": "https://learnmsx.com/",
-            "name": "MSX",
-            "inLanguage": "de-DE",
-            "publisher": { "@id": "https://learnmsx.com/#org" }
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://learnmsx.com/#org",
-            "name": "MSX",
-            "alternateName": "MSX Trading",
-            "url": "https://learnmsx.com/",
-            "description": "Trading-Coaching von MO mit Schwerpunkt auf Daytrading von NASDAQ und Gold: Einzelbetreuung, zwei Gruppencalls pro Woche, Videokurs und Community.",
-            "founder": { "@id": "https://learnmsx.com/#mo" },
-            "areaServed": "DE",
-            "knowsLanguage": ["de", "en"]
-          },
-          {
-            "@type": "Person",
-            "@id": "https://learnmsx.com/#mo",
-            "name": "MO",
-            "jobTitle": "Daytrader",
-            "description": "Daytrader mit Schwerpunkt NASDAQ und Gold, begleitet Einsteiger im 1:1-Coaching unter der Marke MSX.",
-            "url": "https://learnmsx.com/trading-coaching",
-            "knowsAbout": ["Daytrading", "NASDAQ", "Gold", "Risikomanagement"]
-          },
-          {
-            "@type": "Service",
-            "@id": "https://learnmsx.com/#coaching",
-            "name": "Trading-Coaching (MSX)",
-            "serviceType": "Trading-Ausbildung und Einzelbetreuung",
-            "provider": { "@id": "https://learnmsx.com/#org" },
-            "url": "https://learnmsx.com/trading-coaching",
-            "areaServed": "DE",
-            "audience": {
-              "@type": "Audience",
-              "audienceType": "Einsteiger im Daytrading"
-            }
-          }
-        ]
+    <style>
+      @font-face {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('/assets/space-grotesk-latin-700-normal-RjhwGPKo.woff2') format('woff2');
       }
-    </script>
-    <script type="module" crossorigin src="/assets/index-58950dd3.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-6c714b9a.css">
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('/assets/inter-latin-400-normal-C38fXH4l.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url('/assets/inter-latin-600-normal-LgqL8muc.woff2') format('woff2');
+      }
+
+      :root {
+        --ink: #080b14;
+        --line: #232c42;
+        --cloud: #eaedf5;
+        --mist: #98a1b8;
+        --gold: #d4a24e;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { min-height: 100%; }
+      body {
+        background: var(--ink);
+        color: var(--cloud);
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 28px 20px;
+        position: relative;
+        overflow-x: hidden;
+      }
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(212, 162, 78, 0.10), transparent 70%);
+      }
+      main {
+        position: relative;
+        width: 100%;
+        max-width: 26rem;
+        text-align: center;
+        animation: rise 0.5s ease both;
+      }
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(14px); }
+        to { opacity: 1; transform: none; }
+      }
+      .logo { display: block; margin: 0 auto 30px; height: 38px; }
+      h1 {
+        font-family: 'Space Grotesk', system-ui, sans-serif;
+        font-weight: 700;
+        font-size: clamp(21px, 5.4vw, 26px);
+        letter-spacing: -0.02em;
+        line-height: 1.25;
+        margin-bottom: 10px;
+      }
+      h1 .en { color: var(--gold); }
+      .sub {
+        font-size: 13.5px;
+        color: var(--mist);
+        line-height: 1.6;
+        margin-bottom: 32px;
+      }
+      .choices { display: flex; flex-direction: column; gap: 12px; }
+      .choice {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 17px 18px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: rgba(15, 21, 36, 0.6);
+        color: var(--cloud);
+        text-decoration: none;
+        transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+      .choice:hover, .choice:focus-visible {
+        transform: translateY(-2px);
+        border-color: rgba(212, 162, 78, 0.6);
+        background: rgba(212, 162, 78, 0.06);
+        outline: none;
+      }
+      .flag {
+        flex: 0 0 42px;
+        height: 30px;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      .flag i { flex: 1; display: block; }
+      .label { flex: 1; text-align: left; }
+      .label strong {
+        display: block;
+        font-family: 'Space Grotesk', system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 16.5px;
+        letter-spacing: -0.01em;
+      }
+      .label span {
+        display: block;
+        font-size: 12.5px;
+        color: var(--mist);
+        margin-top: 2px;
+      }
+      .arrow { flex: 0 0 auto; color: var(--mist); transition: color 0.2s ease; }
+      .choice:hover .arrow, .choice:focus-visible .arrow { color: var(--gold); }
+      footer {
+        margin-top: 30px;
+        font-size: 11px;
+        color: #5c6780;
+        letter-spacing: 0.04em;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        main { animation: none; }
+        .choice, .arrow { transition: none; }
+        .choice:hover { transform: none; }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <main>
+      <svg class="logo" viewBox="0 0 120 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MSX">
+        <text x="0" y="26" font-family="'Space Grotesk', system-ui, sans-serif" font-weight="700" font-size="27" letter-spacing="-0.5" fill="#eaedf5">MSX</text>
+        <path d="M60 25 L72 16 L80 21 L96 6" stroke="#d4a24e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="96" cy="6" r="3.2" fill="#d4a24e"/>
+      </svg>
+
+      <h1>Sprache wählen<br /><span class="en">Choose your language</span></h1>
+      <p class="sub">Trading-Coaching mit MO · NASDAQ &amp; Gold</p>
+
+      <div class="choices">
+        <a class="choice" href="/de/" hreflang="de" data-lang="de">
+          <span class="flag" aria-hidden="true">
+            <i style="background:#000000"></i>
+            <i style="background:#DD0000"></i>
+            <i style="background:#FFCE00"></i>
+          </span>
+          <span class="label">
+            <strong>Deutsch</strong>
+            <span>Zur deutschen Version</span>
+          </span>
+          <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+
+        <a class="choice" href="/en/" hreflang="en" data-lang="en">
+          <span class="flag" aria-hidden="true" style="background:#012169">
+            <svg viewBox="0 0 60 40" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%">
+              <path d="M0 0 L60 40 M60 0 L0 40" stroke="#ffffff" stroke-width="9"/>
+              <path d="M0 0 L60 40 M60 0 L0 40" stroke="#C8102E" stroke-width="4"/>
+              <path d="M30 0 V40 M0 20 H60" stroke="#ffffff" stroke-width="14"/>
+              <path d="M30 0 V40 M0 20 H60" stroke="#C8102E" stroke-width="8"/>
+            </svg>
+          </span>
+          <span class="label">
+            <strong>English</strong>
+            <span>Go to the English version</span>
+          </span>
+          <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <footer>© 2026 MSX · learnmsx.com</footer>
+    </main>
+
+    <script>
+      (function () {
+        // Wer schon einmal gewaehlt hat, wird beim naechsten Besuch direkt weitergeleitet.
+        // Mit ?wahl=1 laesst sich die Auswahl erneut aufrufen.
+        try {
+          var params = new URLSearchParams(location.search);
+          if (params.get('wahl') !== '1') {
+            var stored = localStorage.getItem('msx_lang');
+            if (stored === 'de' || stored === 'en') {
+              location.replace('/' + stored + '/');
+              return;
+            }
+          }
+        } catch (e) {}
+        var links = document.querySelectorAll('.choice');
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener('click', function () {
+            try { localStorage.setItem('msx_lang', this.getAttribute('data-lang')); } catch (e) {}
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
