@@ -217,19 +217,8 @@
     </main>
 
     <script>
+      // Gewaehlte Sprache nur merken (fuer spaetere Auswertung) - es wird immer gefragt.
       (function () {
-        // Wer schon einmal gewaehlt hat, wird beim naechsten Besuch direkt weitergeleitet.
-        // Mit ?wahl=1 laesst sich die Auswahl erneut aufrufen.
-        try {
-          var params = new URLSearchParams(location.search);
-          if (params.get('wahl') !== '1') {
-            var stored = localStorage.getItem('msx_lang');
-            if (stored === 'de' || stored === 'en') {
-              location.replace('/' + stored + '/');
-              return;
-            }
-          }
-        } catch (e) {}
         var links = document.querySelectorAll('.choice');
         for (var i = 0; i < links.length; i++) {
           links[i].addEventListener('click', function () {
